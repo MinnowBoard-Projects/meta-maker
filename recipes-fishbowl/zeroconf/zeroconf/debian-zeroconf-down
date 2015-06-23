@@ -1,0 +1,4 @@
+# Take zeroconf down
+if [ "X$IFACE" = "Xeth0" ]; then
+	killall zeroconf
+fi

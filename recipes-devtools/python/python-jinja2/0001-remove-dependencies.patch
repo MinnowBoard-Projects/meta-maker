@@ -1,0 +1,26 @@
+Remove dependencies
+
+Upstream-status: Inappropriate (aka total hack)
+
+Signed-off-by: Darren Hart <dvhart@linux.intel.com>
+---
+ setup.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index d572382..e7ecabf 100644
+--- a/setup.py
++++ b/setup.py
+@@ -80,7 +80,8 @@ setup(
+         'Topic :: Text Processing :: Markup :: HTML'
+     ],
+     packages=['jinja2', 'jinja2.testsuite', 'jinja2.testsuite.res'],
+-    install_requires=['markupsafe'],
++    # Handle dependencies via the bitbake meta-data - hideous hack
++    #    install_requires=['markupsafe'],
+     extras_require={'i18n': ['Babel>=0.8']},
+     test_suite='jinja2.testsuite.suite',
+     include_package_data=True,
+-- 
+2.1.4
+

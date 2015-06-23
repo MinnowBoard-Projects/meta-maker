@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# We only run on eth0 for now
+if [ "X$IFACE" = "Xeth0" ]; then
+	echo "Waiting for IP on $IFACE"
+	for i in $(seq 0 120); do
+                ifconfig eth0 | grep -q "inet addr"
+                if [ $? -eq 0 ]; then		
+			ifconfig $IFACE | python /usr/bin/broadcast_ip.py &
+			exit 0
+		fi
+		sleep 1
+	done
+	echo -e "\nERROR: $IFACE has no IP address"
+fi
+
+exit 0
