@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384
 RDEPENDS_${PN} += "ipython"
 
 # FIXME: Move the tadpole library to it's own repo and recipe, then DEPEND on it
-SRC_URI = "https://github.com/MinnowBoard/fishbowl-notebooks/archive/master.tar.gz;downloadfilename=fishbowl-notebook.tar.gz"
+SRC_URI = "https://github.com/steelee/fishbowl-notebooks/archive/master.tar.gz;downloadfilename=fishbowl-notebook.tar.gz"
 SRC_URI[md5sum] = "727594797aa5a8c6fc27f8dd7fc5805a"
 SRC_URI[sha256sum] = "701ab22403103da746cf70ca08cbe09a60c829c0bd30044d5f2d52ca9cc4e716"
 

@@ -18,7 +18,7 @@ SRC_URI[sha256sum] = "6f7687bef4eedf6d4caf8ef385eed69f5f3f038b10cd3b229145ccd703
 inherit setuptools
 
 do_fetch(){
-    git clone --recursive http://github.com/steelee/minnow_max_maker.git ${S}/python-maker
+    git clone http://github.com/steelee/minnow_max_maker.git ${S}/python-maker
     mv ${S}/python-maker/* ${S}
     rm -rf ${S}/python-maker
 }

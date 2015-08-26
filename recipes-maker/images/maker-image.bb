@@ -30,6 +30,7 @@ IMAGE_INSTALL_append += "python-pycparser"
 IMAGE_INSTALL_append += "python-Imaging"
 IMAGE_INSTALL_append += "python-cffi"
 IMAGE_INSTALL_append += "python-smbus-cffi"
+IMAGE_INSTALL_append += "python-spidev"
 IMAGE_INSTALL_append += "low-speed-spidev"
 IMAGE_INSTALL_append += "maker"
 
