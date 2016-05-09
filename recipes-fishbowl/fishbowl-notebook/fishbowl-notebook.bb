@@ -5,8 +5,8 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384
 RDEPENDS_${PN} += "ipython"
 
 SRC_URI = "https://github.com/MinnowBoard/fishbowl-notebooks/archive/master.tar.gz;downloadfilename=fishbowl-notebook.tar.gz"
-SRC_URI[md5sum] = "727594797aa5a8c6fc27f8dd7fc5805a"
-SRC_URI[sha256sum] = "701ab22403103da746cf70ca08cbe09a60c829c0bd30044d5f2d52ca9cc4e716"
+SRC_URI[md5sum] = "bf6e27172fad87801099fc1e28e9de57"
+SRC_URI[sha256sum] = "d27e2964ee96b9549a61baaa4580e6e33cb4dc8464295e19c9e2ab92d6bf9f04"
 
 FISHBOWL_NOTEBOOKS_DIR = "/notebooks"
 
@@ -42,7 +42,7 @@ do_install() {
 
 	install -d ${D}/home/root
 	install -m 0755 ${S}/pythonrc ${D}/home/root/.pythonrc
-	
+
 	cp -r ${S}/ipython ${D}/home/root/.ipython
 
 }
@@ -50,7 +50,7 @@ do_install() {
 pkg_postinst_${PN} (){
 	#!/bin/sh
 	# post-install symbolic link
-	ln -s  /etc/init.d/fishbowl /usr/bin/fishbowl 
+	ln -s  /etc/init.d/fishbowl /usr/bin/fishbowl
 }
 
 FILES_${PN} = "${sysconfdir}/init.d ${FISHBOWL_NOTEBOOKS_DIR} ${bindir} /home/root ${PYTHON_SITEPACKAGES_DIR}"
