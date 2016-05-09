@@ -2,7 +2,7 @@ DESCRIPTION = "Yocto image for the maker project"
 
 inherit core-image
 
-IMAGE_FSTYPES = "cpio.gz ext3"
+IMAGE_FSTYPES = "tar.gz cpio.gz ext4"
 
 # General system packages
 IMAGE_INSTALL += "zeroconf"
@@ -37,4 +37,3 @@ IMAGE_INSTALL_append += "maker"
 ALLOW_EMPTY_${PN} = "1"
 ALLOW_EMPTY_${PN}-dev = "1"
 ALLOW_EMPTY_${PN}-staticdev = "1"
-
