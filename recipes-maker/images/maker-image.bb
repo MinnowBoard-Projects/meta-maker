@@ -18,7 +18,7 @@ IMAGE_INSTALL += "python-pip"
 IMAGE_INSTALL += "python-distribute"
 
 # Python libraries
-IMAGE_INSTALL += "mraa"
+IMAGE_INSTALL += "mraa python-mraa"
 # PyLab - consider moving these to their own image (~40MB)
 IMAGE_INSTALL += "python-numpy python-matplotlib"
 
